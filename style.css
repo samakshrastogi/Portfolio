@@ -1,0 +1,73 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0c0f14;
+  color: #e6edf3;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+#three-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full shadow-lg hover:from-blue-700 hover:to-blue-800 transition duration-300 ease-in-out transform hover:scale-105 font-semibold tracking-wide;
+}
+
+.project-card {
+  @apply bg-gray-800 rounded-xl shadow-xl p-8 transform transition duration-300 ease-in-out hover:scale-103 hover:shadow-2xl border border-gray-700;
+}
+
+.skill-item {
+  @apply bg-gray-700 text-gray-200 px-5 py-2 rounded-full text-base font-medium transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white transform hover:-translate-y-1;
+}
+
+.experience-item {
+  @apply relative pl-10 pb-10 border-l-2 border-gray-700;
+}
+
+.experience-item::before {
+  content: "";
+  @apply absolute left-[-10px] top-0 w-5 h-5 bg-blue-600 rounded-full border-3 border-gray-800;
+}
+
+.contact-input {
+  @apply w-full p-4 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg;
+}
